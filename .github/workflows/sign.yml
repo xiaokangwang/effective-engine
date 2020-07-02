@@ -25,6 +25,10 @@ jobs:
       run: chmod +x $GITHUB_WORKSPACE/release/requestsign_github.sh
       
     # Invoke release signing
+    - name: make it run
+      run: chmod +x $GITHUB_WORKSPACE/release/requestsign.sh
+      
+    # Invoke release signing
     - name: Invoke release signing
       env:
         SIGN_SERVICE_PASSWORD: ${{ secrets.SIGN_SERVICE_PASSWORD }}
