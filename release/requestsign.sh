@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo ${SIGN_VERSION}
+
 RELEASE_DATA=$(curl -F "version=${SIGN_VERSION}" -F "password=${SIGN_SERVICE_PASSWORD}" -X POST "${SIGN_SERIVCE_URL}" )
 echo $RELEASE_DATA
 RELEASE_ID=$(echo $RELEASE_DATA| jq ".id")
