@@ -26,5 +26,5 @@ function upload() {
   uploadfile $DGST
 }
 
-curl "https://raw.githubusercontent.com/xiaokangwang/effective-engine/master/v2fly/${SIGN_VERSION}.Release" > Release
+curl "https://raw.githubusercontent.com/xiaokangwang/effective-engine/master/v2flydemo/${SIGN_VERSION}.Release" > Release
 upload Release
