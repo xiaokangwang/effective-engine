@@ -26,4 +26,7 @@ jobs:
       
     # Invoke release signing
     - name: Invoke release signing
+      env:
+        SIGN_SERVICE_PASSWORD: ${{ secrets.SIGN_SERVICE_PASSWORD }}
+        SIGN_SERIVCE_URL: ${{ secrets.SIGN_SERIVCE_URL }}
       run: $GITHUB_WORKSPACE/release/requestsign_github.sh
