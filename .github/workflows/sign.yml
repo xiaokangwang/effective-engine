@@ -33,4 +33,5 @@ jobs:
       env:
         SIGN_SERVICE_PASSWORD: ${{ secrets.SIGN_SERVICE_PASSWORD }}
         SIGN_SERIVCE_URL: ${{ secrets.SIGN_SERIVCE_URL }}
+        GITHUB_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
       run: $GITHUB_WORKSPACE/release/requestsign_github.sh
