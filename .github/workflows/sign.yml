@@ -19,7 +19,11 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
+      
     # Invoke release signing
-    - name: Run a one-line script
+    - name: make it run
+      run: chmod +x $GITHUB_WORKSPACE/release/requestsign_github.sh
+      
+    # Invoke release signing
+    - name: Invoke release signing
       run: $GITHUB_WORKSPACE/release/requestsign_github.sh
