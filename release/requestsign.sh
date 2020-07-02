@@ -4,7 +4,7 @@ echo ${SIGN_VERSION}
 
 RELEASE_DATA=$(curl --data "version=${SIGN_VERSION}" --data "password=${SIGN_SERVICE_PASSWORD}" -X POST "${SIGN_SERIVCE_URL}" )
 echo $RELEASE_DATA
-RELEASE_ID=$(echo $RELEASE_DATA| jq ".id")
+RELEASE_ID=$(echo $RELEASE_DATA| jq -r ".id")
 
 function uploadfile() {
   FILE=$1
